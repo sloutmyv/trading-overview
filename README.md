@@ -41,3 +41,16 @@ Ce script interroge l’API **Financial Modeling Prep** afin d’extraire les `N
 Ce script lit un fichier JSON généré par `003_top_stocks_marketcap.py` et produit une visualisation **treemap** des capitalisations boursières à la date indiquée.  
 Une légende, située sous le graphique, fait correspondre les symboles boursiers aux noms complets des entreprises.
 
+## Résumé du script 005_get_crypto_data.py
+
+Ce script interroge l’API Binance pour télécharger les chandeliers historiques (prix, volumes) des 3 plus grandes cryptomonnaies du dernier snapshot top_crypto_history.json (paire en USDC).
+Les données sont stockées en .parquet dans crypto_data/pair_data/, et consolidées automatiquement si des données existent déjà.
+
+## Résumé du script 006_preview_crypto_data.py
+
+Ce script lance un dashboard Streamlit permettant de visualiser de manière interactive les fichiers .parquet des données crypto.
+Le graphique affiche les chandeliers (OHLC) et les volumes colorés (en rouge ou vert) selon l’évolution du prix. L’utilisateur peut filtrer dynamiquement la plage de temps via un calendrier.
+
+idée : 
+- Extraire les x années d'historique des top crypto 1D 4H 1H et les stocker dans un .parquet 
+- Extraire les x années d'historique des top stocks 1D 4H 1H et les stocker dans un .parquet 
