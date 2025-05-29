@@ -23,8 +23,11 @@ Pour préparer un espace Python propre au projet :
    pip freeze > requirements.txt
    ```
 
----
-
 ## Résumé du script `001_top_crypto_snapshot.py`
 
 Ce script interroge l’API CoinGecko afin d’extraire, à la date d’exécution, les `N` cryptomonnaies ayant la plus grande capitalisation boursière. Le résultat est sauvegardé dans un fichier JSON intitulé `YYMMDD_top_crypto_history.json` et stocké dans le dossier `crypto_data/market_data/`. Exécuté régulièrement, il constitue une série de snapshots quotidiens exploitables pour l’analyse de l’évolution du marché crypto. **Note : seule la market cap est utilisée comme critère de classement.**
+
+## Résumé du script `002_plot_marketcap.py`
+
+Ce script charge un fichier JSON produit par le script 001 et affiche un graphique de type treemap représentant la répartition des capitalisations boursières des principales cryptomonnaies. Chaque surface est proportionnelle à la market cap de l’actif. Le script est conçu pour être utilisé dans un notebook ou directement depuis un script Python avec la fonction `plot_marketcap()`.
+
