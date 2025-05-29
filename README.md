@@ -31,3 +31,13 @@ Ce script interroge l’API CoinGecko afin d’extraire, à la date d’exécuti
 
 Ce script charge un fichier JSON produit par le script 001 et affiche un graphique de type treemap représentant la répartition des capitalisations boursières des principales cryptomonnaies. Chaque surface est proportionnelle à la market cap de l’actif. Le script est conçu pour être utilisé dans un notebook ou directement depuis un script Python avec la fonction `plot_marketcap()`.
 
+## Résumé du script `003_top_stocks_marketcap.py`
+
+Ce script interroge l’API **Financial Modeling Prep** afin d’extraire les `N` entreprises cotées ayant la plus grande capitalisation boursière (NASDAQ et NYSE). Le résultat est sauvegardé dans un fichier JSON intitulé `YYMMDD_top_stock_history.json` et stocké dans le dossier `stock_data/market_data/`.  
+**Note : le classement est ordonné localement par market cap décroissante à partir des données extraites.**
+
+## Résumé du script `004_plot_stock_marketcap.py`
+
+Ce script lit un fichier JSON généré par `003_top_stocks_marketcap.py` et produit une visualisation **treemap** des capitalisations boursières à la date indiquée.  
+Une légende, située sous le graphique, fait correspondre les symboles boursiers aux noms complets des entreprises.
+
