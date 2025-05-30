@@ -51,6 +51,14 @@ Les données sont stockées en .parquet dans crypto_data/pair_data/, et consolid
 Ce script lance un dashboard Streamlit permettant de visualiser de manière interactive les fichiers .parquet des données crypto.
 Le graphique affiche les chandeliers (OHLC) et les volumes colorés (en rouge ou vert) selon l’évolution du prix. L’utilisateur peut filtrer dynamiquement la plage de temps via un calendrier.
 
-idée : 
-- Extraire les x années d'historique des top crypto 1D 4H 1H et les stocker dans un .parquet 
-- Extraire les x années d'historique des top stocks 1D 4H 1H et les stocker dans un .parquet 
+
+## Résumé du script 007_get_stock_data.py
+
+Extraction des stocks 
+
+## Résumé du script 008_simple_EMA_strategy_test.py
+
+première stratégie sur le crossover des EMA sur le btc 1d pour test
+
+
+
