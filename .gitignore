@@ -174,5 +174,4 @@ cython_debug/
 .pypirc
 
 # Files 
-crypto_data
-stock_data
+data

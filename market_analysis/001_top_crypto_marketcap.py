@@ -2,24 +2,14 @@
 """001_top_crypto_snapshot.py
 
 Generate a daily snapshot of the top-N cryptocurrencies by market cap and
-save it in `crypto_data/market_data/YYMMDD_top_crypto_history.json`.
-
-Revision 6 – 2025-05-29
-----------------------
-* **Suppression de l’analyse des volumes** : les volumes 30j ont été retirés
-  (incompatibilité API ou instabilité). Le script se concentre uniquement
-  sur la capitalisation boursière.
-* Résultat : un classement quotidien stable, simple et rapide.
+save it in `data/market_analysis/YYMMDD_top_crypto_marketcap.json`.
 
 Usage
 -----
-```bash
-python 001_top_crypto_snapshot.py             # top-20 du jour
-python 001_top_crypto_snapshot.py --top 50    # top-50
-python 001_top_crypto_snapshot.py --overwrite
+python 001_top_crypto_marketcap.py             # top-20 du jour
+python 001_top_crypto_marketcap.py --top 50    # top-50
+python 001_top_crypto_marketcap.py --overwrite
 ```
-
-Dépendances : Python ⩾ 3.8 + `requests`
 """
 
 from __future__ import annotations
@@ -61,7 +51,7 @@ else:
 
 MARKETS = f"{BASE}/coins/markets"
 
-TARGET_DIR = Path("crypto_data/market_data")
+TARGET_DIR = Path("data/market_analysis")
 DEFAULT_TOP_N = 20
 
 # ────────────────────────────────────────────────────────────────────────────────
