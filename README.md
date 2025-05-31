@@ -54,11 +54,11 @@ Le graphique affiche les chandeliers (OHLC) et les volumes colorés (en rouge ou
 
 ## Résumé du script 007_get_stock_data.py
 
-Extraction des stocks 
+Extraction des X plus gros stocks dans le JSON
 
 ## Résumé du script 008_simple_EMA_strategy_test.py
 
-première stratégie sur le crossover des EMA sur le btc 1d pour test
+Premier test de stratégie sur le crossover EMA 12/26 sur le btc 1d
 
 
 
