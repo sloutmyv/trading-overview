@@ -177,4 +177,4 @@ cython_debug/
 data
 test_perm
 train_perm
-.html 
+*.html 
